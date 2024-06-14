@@ -2,7 +2,7 @@
 A website to view ONSIS Error XML File
 
 ## Description
-A webpage built using HTML, CSS, and JavaScript. This project is designed to provide a web-based tool for OAs and staff to view ONSIS Error XML File.
+This webpage reads a XML file, transform the XML content with XSLT stylesheet, and display the transformed content on the webpage. This website is built using HTML, CSS, and JavaScript. This project is designed to allow users to view the content of the XML file in a browser-friendly way, which is typically more readable and visually appealing than raw XML.
 
 ## Table of Contents
 - [Installation](#Installation)
