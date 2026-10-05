@@ -7,8 +7,8 @@
  <h2><center>OnSIS Batch File Results Summary</center></h2>
   <TABLE WIDTH="100%">
   <TR>
-  <TD><h4>Academic Year/Année scolaire : <xsl:value-of select="//ACADEMIC_YEAR"/></h4></TD>
-  <TD><h4>Submission Period/Période de présentation :  <xsl:value-of select="//SUBMISSION_PERIOD_TYPE"/></h4></TD>
+  <TD><h4>Academic Year/AnnÃ©e scolaire : <xsl:value-of select="//ACADEMIC_YEAR"/></h4></TD>
+  <TD><h4>Submission Period/PÃ©riode de prÃ©sentation :  <xsl:value-of select="//SUBMISSION_PERIOD_TYPE"/></h4></TD>
   <TD><h4>File date/time/Date/heure du fichier : <xsl:value-of select="//DATE"/>                        
         -<xsl:value-of select="substring(//TIME,1,2)"/>:<xsl:value-of select="substring(//TIME,3,2)"/>:<xsl:value-of select="substring(//TIME,5,2)"/></h4></TD>
   </TR>
@@ -113,7 +113,7 @@
 			</TABLE>
 		    </xsl:when>
 		    <xsl:when test="name(../..) = 'SEGMENT'">
-			<b>School/École</b>&#032; <xsl:value-of select="../../../../SCHOOL_NUMBER"/>, <b>Class/Classe</b>&#032; <xsl:value-of select="../../../CLASS_CODE"/>
+			<b>School/Ã‰cole</b>&#032; <xsl:value-of select="../../../../SCHOOL_NUMBER"/>, <b>Class/Classe</b>&#032; <xsl:value-of select="../../../CLASS_CODE"/>
  			<TABLE BORDER="1" WIDTH="100%" FRAME="box">
  			<TR>
  				<TH><b><center>Section</center></b></TH>
@@ -132,7 +132,7 @@
 			</TABLE>
 		    </xsl:when>
 		    <xsl:when test="name(../..) = 'COURSE_CALENDAR'">
-			<b>School/École</b>&#032; <xsl:value-of select="../../../SCHOOL_NUMBER"/>
+			<b>School/Ã‰cole</b>&#032; <xsl:value-of select="../../../SCHOOL_NUMBER"/>
 			<TABLE BORDER="1" WIDTH="100%" FRAME="box">
 			<TR>
 				<TH><b><center>Section</center></b></TH>
@@ -151,8 +151,8 @@
 			</TABLE>
 		    </xsl:when>
 		    <xsl:when test="name(../..) = 'COURSE_CALENDAR_COURSE'">
-			<b>School/École</b>&#032; <xsl:value-of select="../../../../SCHOOL_NUMBER"/>
-			<b>, Academic Year/Année Scolaire</b>&#032; <xsl:value-of select="../../../COURSE_CALENDAR_ACADEMIC_YEAR"/>
+			<b>School/Ã‰cole</b>&#032; <xsl:value-of select="../../../../SCHOOL_NUMBER"/>
+			<b>, Academic Year/AnnÃ©e Scolaire</b>&#032; <xsl:value-of select="../../../COURSE_CALENDAR_ACADEMIC_YEAR"/>
 			<TABLE BORDER="1" WIDTH="100%" FRAME="box">
 			<TR>
 				<TH><b><center>Section</center></b></TH>
@@ -171,8 +171,8 @@
 			</TABLE>
 		    </xsl:when>
 		    <xsl:when test="name(../..) = 'STUDENT'">
-			<b>School/école:</b>&#032; <xsl:value-of select="../../../SCHOOL_NUMBER"/><br></br>
-			<b>Student/élève:</b>&#032; <xsl:value-of select="../../STUDENT_LEGAL_LAST_NAME"/>, 
+			<b>School/Ã©cole:</b>&#032; <xsl:value-of select="../../../SCHOOL_NUMBER"/><br></br>
+			<b>Student/Ã©lÃ¨ve:</b>&#032; <xsl:value-of select="../../STUDENT_LEGAL_LAST_NAME"/>, 
 			<xsl:value-of select="../../STUDENT_LEGAL_GIVEN_NAME"/>&#032;
 			<xsl:value-of select="../../STUDENT_LEGAL_SECOND_NAME"/>; 
 			<b>OEN/NISO </b><xsl:value-of select="../../OEN"/><br></br>
@@ -194,8 +194,8 @@
 			</TABLE>
 		    </xsl:when>
 		    <xsl:when test="name(../..) = 'PREV_PLAR'">
-			<b>School/école:</b>&#032; <xsl:value-of select="../../../../SCHOOL_NUMBER"/><br></br>
-			<b>Student/élève:</b>&#032; <xsl:value-of select="../../../STUDENT_LEGAL_LAST_NAME"/>, 
+			<b>School/Ã©cole:</b>&#032; <xsl:value-of select="../../../../SCHOOL_NUMBER"/><br></br>
+			<b>Student/Ã©lÃ¨ve:</b>&#032; <xsl:value-of select="../../../STUDENT_LEGAL_LAST_NAME"/>, 
 			<xsl:value-of select="../../../STUDENT_LEGAL_GIVEN_NAME"/>&#032;
 			<xsl:value-of select="../../../STUDENT_LEGAL_SECOND_NAME"/>; 
 			<b>OEN/NISO </b><xsl:value-of select="../../../OEN"/><br></br>
@@ -217,8 +217,8 @@
 			</TABLE>
 		    </xsl:when>
 		    <xsl:when test="name(../..) = 'NE_OPTION_SHEET'">
-			<b>School/école:</b>&#032; <xsl:value-of select="../../../../SCHOOL_NUMBER"/><br></br>
-			<b>Student/élève:</b>&#032; <xsl:value-of select="../../../STUDENT_LEGAL_LAST_NAME"/>, 
+			<b>School/Ã©cole:</b>&#032; <xsl:value-of select="../../../../SCHOOL_NUMBER"/><br></br>
+			<b>Student/Ã©lÃ¨ve:</b>&#032; <xsl:value-of select="../../../STUDENT_LEGAL_LAST_NAME"/>, 
 			<xsl:value-of select="../../../STUDENT_LEGAL_GIVEN_NAME"/>&#032;
 			<xsl:value-of select="../../../STUDENT_LEGAL_SECOND_NAME"/>; 
 			<b>OEN/NISO </b><xsl:value-of select="../../../OEN"/><br></br>
@@ -240,8 +240,8 @@
 			</TABLE>
 		    </xsl:when>
 		    <xsl:when test="name(../..) = 'NE_OPTION_SHEET_COURSE'">
-			<b>School/école:</b>&#032; <xsl:value-of select="../../../../../SCHOOL_NUMBER"/><br></br>
-			<b>Student/élève:</b>&#032; <xsl:value-of select="../../../../STUDENT_LEGAL_LAST_NAME"/>, 
+			<b>School/Ã©cole:</b>&#032; <xsl:value-of select="../../../../../SCHOOL_NUMBER"/><br></br>
+			<b>Student/Ã©lÃ¨ve:</b>&#032; <xsl:value-of select="../../../../STUDENT_LEGAL_LAST_NAME"/>, 
 			<xsl:value-of select="../../../../STUDENT_LEGAL_GIVEN_NAME"/>&#032;
 			<xsl:value-of select="../../../../STUDENT_LEGAL_SECOND_NAME"/>; 
 			<b>OEN/NISO </b><xsl:value-of select="../../../../OEN"/><br></br>
@@ -263,8 +263,8 @@
 			</TABLE>
 		    </xsl:when>
 		    <xsl:when test="name(../..) = 'STUDENT_SCHOOL_ENROLMENT'">
-			<b>School/école:</b>&#032; <xsl:value-of select="../../../../SCHOOL_NUMBER"/><br></br>
-			<b>Student/élève:</b>&#032; <xsl:value-of select="../../../STUDENT_LEGAL_LAST_NAME"/>, 
+			<b>School/Ã©cole:</b>&#032; <xsl:value-of select="../../../../SCHOOL_NUMBER"/><br></br>
+			<b>Student/Ã©lÃ¨ve:</b>&#032; <xsl:value-of select="../../../STUDENT_LEGAL_LAST_NAME"/>, 
 			<xsl:value-of select="../../../STUDENT_LEGAL_GIVEN_NAME"/>&#032;
 			<xsl:value-of select="../../../STUDENT_LEGAL_SECOND_NAME"/>; 
 			<b>OEN/NISO </b><xsl:value-of select="../../../OEN"/><br></br>
@@ -286,8 +286,8 @@
 			</TABLE>
 		    </xsl:when>
 		    <xsl:when test="name(../..) = 'STUDENT_CLASS_ENROLMENT'">
-			<b>School/école:</b>&#032; <xsl:value-of select="../../../../../SCHOOL_NUMBER"/><br></br>
-			<b>Student/élève:</b>&#032; <xsl:value-of select="../../../../STUDENT_LEGAL_LAST_NAME"/>, 
+			<b>School/Ã©cole:</b>&#032; <xsl:value-of select="../../../../../SCHOOL_NUMBER"/><br></br>
+			<b>Student/Ã©lÃ¨ve:</b>&#032; <xsl:value-of select="../../../../STUDENT_LEGAL_LAST_NAME"/>, 
 			<xsl:value-of select="../../../../STUDENT_LEGAL_GIVEN_NAME"/>&#032;
 			<xsl:value-of select="../../../../STUDENT_LEGAL_SECOND_NAME"/>; 
 			<b>OEN/NISO </b><xsl:value-of select="../../../../OEN"/>;
@@ -310,8 +310,8 @@
 			</TABLE>
 		    </xsl:when>
 		    <xsl:when test="name(../..) = 'AVERAGE_DAILY_ENROLMENT'">
-			<b>School/école:</b>&#032; <xsl:value-of select="../../../../../../SCHOOL_NUMBER"/><br></br>
-			<b>Student/élève:</b>&#032; <xsl:value-of select="../../../../../STUDENT_LEGAL_LAST_NAME"/>, 
+			<b>School/Ã©cole:</b>&#032; <xsl:value-of select="../../../../../../SCHOOL_NUMBER"/><br></br>
+			<b>Student/Ã©lÃ¨ve:</b>&#032; <xsl:value-of select="../../../../../STUDENT_LEGAL_LAST_NAME"/>, 
 			<xsl:value-of select="../../../../../STUDENT_LEGAL_GIVEN_NAME"/>&#032;
 			<xsl:value-of select="../../../../../STUDENT_LEGAL_SECOND_NAME"/>; 
 			<b>OEN/NISO </b><xsl:value-of select="../../../../../OEN"/>;
@@ -335,8 +335,8 @@
 			</TABLE>
 		    </xsl:when>
 		    <xsl:when test="name(../..) = 'NON_CREDIT_AVERAGE_DAILY_ENROLMENT'">
-			<b>School/école:</b>&#032; <xsl:value-of select="../../../../../SCHOOL_NUMBER"/><br></br>
-			<b>Student/élève:</b>&#032; <xsl:value-of select="../../../../STUDENT_LEGAL_LAST_NAME"/>, 
+			<b>School/Ã©cole:</b>&#032; <xsl:value-of select="../../../../../SCHOOL_NUMBER"/><br></br>
+			<b>Student/Ã©lÃ¨ve:</b>&#032; <xsl:value-of select="../../../../STUDENT_LEGAL_LAST_NAME"/>, 
 			<xsl:value-of select="../../../../STUDENT_LEGAL_GIVEN_NAME"/>&#032;
 			<xsl:value-of select="../../../../STUDENT_LEGAL_SECOND_NAME"/>; 
 			<b>OEN/NISO </b>&#032; <xsl:value-of select="../../../../OEN"/>
@@ -358,8 +358,8 @@
 			</TABLE>
 		    </xsl:when>
 		    <xsl:when test="name(../..) = 'REMEDIAL_PROGRAM'">
-			<b>School/école:</b>&#032; <xsl:value-of select="../../../../../SCHOOL_NUMBER"/><br></br>
-			<b>Student/élève:</b>&#032; <xsl:value-of select="../../../../STUDENT_LEGAL_LAST_NAME"/>, 
+			<b>School/Ã©cole:</b>&#032; <xsl:value-of select="../../../../../SCHOOL_NUMBER"/><br></br>
+			<b>Student/Ã©lÃ¨ve:</b>&#032; <xsl:value-of select="../../../../STUDENT_LEGAL_LAST_NAME"/>, 
 			<xsl:value-of select="../../../../STUDENT_LEGAL_GIVEN_NAME"/>&#032;
 			<xsl:value-of select="../../../../STUDENT_LEGAL_SECOND_NAME"/>; 
 			<b>OEN/NISO </b><xsl:value-of select="../../../../OEN"/><br></br>
@@ -381,8 +381,8 @@
 			</TABLE>
 		    </xsl:when>
 		    <xsl:when test="name(../..) = 'E_OPTION_SHEET'">
-			<b>School/école:</b>&#032; <xsl:value-of select="../../../../../SCHOOL_NUMBER"/><br></br>
-			<b>Student/élève:</b>&#032; <xsl:value-of select="../../../../STUDENT_LEGAL_LAST_NAME"/>, 
+			<b>School/Ã©cole:</b>&#032; <xsl:value-of select="../../../../../SCHOOL_NUMBER"/><br></br>
+			<b>Student/Ã©lÃ¨ve:</b>&#032; <xsl:value-of select="../../../../STUDENT_LEGAL_LAST_NAME"/>, 
 			<xsl:value-of select="../../../../STUDENT_LEGAL_GIVEN_NAME"/>&#032;
 			<xsl:value-of select="../../../../STUDENT_LEGAL_SECOND_NAME"/>; 
 			<b>OEN/NISO </b><xsl:value-of select="../../../../OEN"/><br></br>
@@ -404,8 +404,8 @@
 			</TABLE>
 		    </xsl:when>
 		    <xsl:when test="name(../..) = 'E_OPTION_SHEET_COURSE'">
-			<b>School/école:</b>&#032; <xsl:value-of select="../../../../../../SCHOOL_NUMBER"/><br></br>
-			<b>Student/élève:</b>&#032; <xsl:value-of select="../../../../../STUDENT_LEGAL_LAST_NAME"/>, 
+			<b>School/Ã©cole:</b>&#032; <xsl:value-of select="../../../../../../SCHOOL_NUMBER"/><br></br>
+			<b>Student/Ã©lÃ¨ve:</b>&#032; <xsl:value-of select="../../../../../STUDENT_LEGAL_LAST_NAME"/>, 
 			<xsl:value-of select="../../../../../STUDENT_LEGAL_GIVEN_NAME"/>&#032;
 			<xsl:value-of select="../../../../../STUDENT_LEGAL_SECOND_NAME"/>; 
 			<b>OEN/NISO </b><xsl:value-of select="../../../../../OEN"/><br></br>
@@ -427,8 +427,8 @@
 			</TABLE>
 		    </xsl:when>
 		    <xsl:when test="name(../..) = 'SPECIAL_EDUCATION'">
-			<b>School/école:</b>&#032; <xsl:value-of select="../../../../../SCHOOL_NUMBER"/><br></br>
-			<b>Student/élève:</b>&#032; <xsl:value-of select="../../../../STUDENT_LEGAL_LAST_NAME"/>, 
+			<b>School/Ã©cole:</b>&#032; <xsl:value-of select="../../../../../SCHOOL_NUMBER"/><br></br>
+			<b>Student/Ã©lÃ¨ve:</b>&#032; <xsl:value-of select="../../../../STUDENT_LEGAL_LAST_NAME"/>, 
 			<xsl:value-of select="../../../../STUDENT_LEGAL_GIVEN_NAME"/>&#032;
 			<xsl:value-of select="../../../../STUDENT_LEGAL_SECOND_NAME"/>; 
 			<b>OEN/NISO </b><xsl:value-of select="../../../../OEN"/><br></br>
@@ -450,8 +450,8 @@
 			</TABLE>
 		    </xsl:when>
 		    <xsl:when test="name(../..) = 'SECOND_LANGUAGE_PROGRAM'">
-			<b>School/école:</b>&#032; <xsl:value-of select="../../../../../SCHOOL_NUMBER"/><br></br>
-			<b>Student/élève:</b>&#032; <xsl:value-of select="../../../../STUDENT_LEGAL_LAST_NAME"/>, 
+			<b>School/Ã©cole:</b>&#032; <xsl:value-of select="../../../../../SCHOOL_NUMBER"/><br></br>
+			<b>Student/Ã©lÃ¨ve:</b>&#032; <xsl:value-of select="../../../../STUDENT_LEGAL_LAST_NAME"/>, 
 			<xsl:value-of select="../../../../STUDENT_LEGAL_GIVEN_NAME"/>&#032;
 			<xsl:value-of select="../../../../STUDENT_LEGAL_SECOND_NAME"/>; 
 			<b>OEN/NISO </b><xsl:value-of select="../../../../OEN"/><br></br>
@@ -473,8 +473,8 @@
 			</TABLE>
 		    </xsl:when>
 		    <xsl:when test="name(../..) = 'PLAR'">
-			<b>School/école:</b>&#032; <xsl:value-of select="../../../../../SCHOOL_NUMBER"/><br></br>
-			<b>Student/élève:</b>&#032; <xsl:value-of select="../../../../STUDENT_LEGAL_LAST_NAME"/>, 
+			<b>School/Ã©cole:</b>&#032; <xsl:value-of select="../../../../../SCHOOL_NUMBER"/><br></br>
+			<b>Student/Ã©lÃ¨ve:</b>&#032; <xsl:value-of select="../../../../STUDENT_LEGAL_LAST_NAME"/>, 
 			<xsl:value-of select="../../../../STUDENT_LEGAL_GIVEN_NAME"/>&#032;
 			<xsl:value-of select="../../../../STUDENT_LEGAL_SECOND_NAME"/>; 
 			<b>OEN/NISO </b><xsl:value-of select="../../../../OEN"/><br></br>
@@ -496,8 +496,8 @@
 			</TABLE>
 		    </xsl:when>
 		    <xsl:when test="name(../..) = 'DIPLOMA'">
-			<b>School/école:</b>&#032; <xsl:value-of select="../../../../../SCHOOL_NUMBER"/><br></br>
-			<b>Student/élève:</b>&#032; <xsl:value-of select="../../../../STUDENT_LEGAL_LAST_NAME"/>, 
+			<b>School/Ã©cole:</b>&#032; <xsl:value-of select="../../../../../SCHOOL_NUMBER"/><br></br>
+			<b>Student/Ã©lÃ¨ve:</b>&#032; <xsl:value-of select="../../../../STUDENT_LEGAL_LAST_NAME"/>, 
 			<xsl:value-of select="../../../../STUDENT_LEGAL_GIVEN_NAME"/>&#032;
 			<xsl:value-of select="../../../../STUDENT_LEGAL_SECOND_NAME"/>; 
 			<b>OEN/NISO </b><xsl:value-of select="../../../../OEN"/><br></br>
@@ -519,8 +519,8 @@
 			</TABLE>
 		    </xsl:when>
 		    <xsl:when test="name(../..) = 'NE_DIPLOMA'">
-			<b>School/école:</b>&#032; <xsl:value-of select="../../../../SCHOOL_NUMBER"/><br></br>
-			<b>Student/élève:</b>&#032; <xsl:value-of select="../../../STUDENT_LEGAL_LAST_NAME"/>, 
+			<b>School/Ã©cole:</b>&#032; <xsl:value-of select="../../../../SCHOOL_NUMBER"/><br></br>
+			<b>Student/Ã©lÃ¨ve:</b>&#032; <xsl:value-of select="../../../STUDENT_LEGAL_LAST_NAME"/>, 
 			<xsl:value-of select="../../../STUDENT_LEGAL_GIVEN_NAME"/>&#032;
 			<xsl:value-of select="../../../STUDENT_LEGAL_SECOND_NAME"/>; 
 			<b>OEN/NISO </b><xsl:value-of select="../../../OEN"/><br></br>
@@ -542,8 +542,8 @@
 			</TABLE>
 		    </xsl:when>
 		    <xsl:when test="name(../..) = 'OTHER_CREDIT'">
-			<b>School/école:</b>&#032; <xsl:value-of select="../../../../../SCHOOL_NUMBER"/><br></br>
-			<b>Student/élève:</b>&#032; <xsl:value-of select="../../../../STUDENT_LEGAL_LAST_NAME"/>, 
+			<b>School/Ã©cole:</b>&#032; <xsl:value-of select="../../../../../SCHOOL_NUMBER"/><br></br>
+			<b>Student/Ã©lÃ¨ve:</b>&#032; <xsl:value-of select="../../../../STUDENT_LEGAL_LAST_NAME"/>, 
 			<xsl:value-of select="../../../../STUDENT_LEGAL_GIVEN_NAME"/>&#032;
 			<xsl:value-of select="../../../../STUDENT_LEGAL_SECOND_NAME"/>; 
 			<b>OEN/NISO </b><xsl:value-of select="../../OEN"/><br></br>
@@ -565,8 +565,8 @@
 			</TABLE>
 		    </xsl:when>
 		    <xsl:when test="name(../..) = 'SWT'">
-			<b>School/école:</b>&#032; <xsl:value-of select="../../../../../SCHOOL_NUMBER"/><br></br>
-			<b>Student/élève:</b>&#032; <xsl:value-of select="../../../../STUDENT_LEGAL_LAST_NAME"/>, 
+			<b>School/Ã©cole:</b>&#032; <xsl:value-of select="../../../../../SCHOOL_NUMBER"/><br></br>
+			<b>Student/Ã©lÃ¨ve:</b>&#032; <xsl:value-of select="../../../../STUDENT_LEGAL_LAST_NAME"/>, 
 			<xsl:value-of select="../../../../STUDENT_LEGAL_GIVEN_NAME"/>&#032;
 			<xsl:value-of select="../../../../STUDENT_LEGAL_SECOND_NAME"/>; 
 			<b>OEN/NISO </b><xsl:value-of select="../../../../OEN"/><br></br>
@@ -588,8 +588,8 @@
 			</TABLE>
 		    </xsl:when>
 		    <xsl:when test="name(../..) = 'SWT_PROGRAM'">
-			<b>School/école:</b>&#032; <xsl:value-of select="../../../../../../SCHOOL_NUMBER"/><br></br>
-			<b>Student/élève:</b>&#032; <xsl:value-of select="../../../../../STUDENT_LEGAL_LAST_NAME"/>, 
+			<b>School/Ã©cole:</b>&#032; <xsl:value-of select="../../../../../../SCHOOL_NUMBER"/><br></br>
+			<b>Student/Ã©lÃ¨ve:</b>&#032; <xsl:value-of select="../../../../../STUDENT_LEGAL_LAST_NAME"/>, 
 			<xsl:value-of select="../../../../../STUDENT_LEGAL_GIVEN_NAME"/>&#032;
 			<xsl:value-of select="../../../../../STUDENT_LEGAL_SECOND_NAME"/>; 
 			<b>OEN/NISO </b><xsl:value-of select="../../../../../OEN"/><br></br>
@@ -611,8 +611,8 @@
 			</TABLE>
 		    </xsl:when>
 		    <xsl:when test="name(../..) = 'SWT_PROGRAM_BY_GENDER'">
-			<b>School/école:</b>&#032; <xsl:value-of select="../../../../../../SCHOOL_NUMBER"/><br></br>
-			<b>Student/élève:</b>&#032; <xsl:value-of select="../../../../../STUDENT_LEGAL_LAST_NAME"/>, 
+			<b>School/Ã©cole:</b>&#032; <xsl:value-of select="../../../../../../SCHOOL_NUMBER"/><br></br>
+			<b>Student/Ã©lÃ¨ve:</b>&#032; <xsl:value-of select="../../../../../STUDENT_LEGAL_LAST_NAME"/>, 
 			<xsl:value-of select="../../../../../STUDENT_LEGAL_GIVEN_NAME"/>&#032;
 			<xsl:value-of select="../../../../../STUDENT_LEGAL_SECOND_NAME"/>; 
 			<b>OEN/NISO </b><xsl:value-of select="../../../../../OEN"/><br></br>
@@ -634,7 +634,7 @@
 			</TABLE>
 		    </xsl:when>
 		    <xsl:when test="name(../..) = 'SCHOOL_INCIDENT'">
-			<b>School/école:</b>&#032; <xsl:value-of select="../../../SCHOOL_NUMBER"/><br></br>
+			<b>School/Ã©cole:</b>&#032; <xsl:value-of select="../../../SCHOOL_NUMBER"/><br></br>
  			<TABLE BORDER="1" WIDTH="100%" FRAME="box">
  			<TR>
  				<TH><b><center>Section</center></b></TH>
@@ -659,8 +659,8 @@
 			<TD>School Incident</TD>
 		    </xsl:when>
 		    <xsl:when test="name(../..) = 'STUDENT_INCIDENT'">
-			<b>School/école:</b>&#032; <xsl:value-of select="../../../../SCHOOL_NUMBER"/><br></br>
-			<b>Student/élève:</b>&#032; <xsl:value-of select="../../STUDENT_LEGAL_LAST_NAME"/>, 
+			<b>School/Ã©cole:</b>&#032; <xsl:value-of select="../../../../SCHOOL_NUMBER"/><br></br>
+			<b>Student/Ã©lÃ¨ve:</b>&#032; <xsl:value-of select="../../STUDENT_LEGAL_LAST_NAME"/>, 
 			<xsl:value-of select="../../STUDENT_LEGAL_GIVEN_NAME"/>&#032;
 			<xsl:value-of select="../../STUDENT_LEGAL_SECOND_NAME"/>; 
 			<b>OEN/NISO </b><xsl:value-of select="../../OEN"/><br></br>
@@ -682,8 +682,8 @@
 			</TABLE>
 		    </xsl:when>
 		    <xsl:when test="name(../..) = 'STUDENT_INFRACTION'">
-			<b>School/école:</b>&#032; <xsl:value-of select="../../../../../SCHOOL_NUMBER"/><br></br>
-			<b>Student/élève:</b>&#032; <xsl:value-of select="../../../STUDENT_LEGAL_LAST_NAME"/>, 
+			<b>School/Ã©cole:</b>&#032; <xsl:value-of select="../../../../../SCHOOL_NUMBER"/><br></br>
+			<b>Student/Ã©lÃ¨ve:</b>&#032; <xsl:value-of select="../../../STUDENT_LEGAL_LAST_NAME"/>, 
 			<xsl:value-of select="../../../STUDENT_LEGAL_GIVEN_NAME"/>&#032;
 			<xsl:value-of select="../../../STUDENT_LEGAL_SECOND_NAME"/>; 
 			<b>OEN/NISO </b><xsl:value-of select="../../../OEN"/><br></br>
@@ -705,8 +705,8 @@
 			</TABLE>
 		    </xsl:when>
 		    <xsl:when test="name(../..) = 'STUDENT_OUTCOME'">
-			<b>School/école:</b>&#032; <xsl:value-of select="../../../../../SCHOOL_NUMBER"/><br></br>
-			<b>Student/élève:</b>&#032; <xsl:value-of select="../../../STUDENT_LEGAL_LAST_NAME"/>, 
+			<b>School/Ã©cole:</b>&#032; <xsl:value-of select="../../../../../SCHOOL_NUMBER"/><br></br>
+			<b>Student/Ã©lÃ¨ve:</b>&#032; <xsl:value-of select="../../../STUDENT_LEGAL_LAST_NAME"/>, 
 			<xsl:value-of select="../../../STUDENT_LEGAL_GIVEN_NAME"/>&#032;
 			<xsl:value-of select="../../../STUDENT_LEGAL_SECOND_NAME"/>; 
 			<b>OEN/NISO </b><xsl:value-of select="../../../OEN"/><br></br>
@@ -728,8 +728,8 @@
 			</TABLE>
 		    </xsl:when>
 		    <xsl:when test="name(../..) = 'SUSPENSION_EXPULSION_PROGRAM'">
-			<b>School/école:</b>&#032; <xsl:value-of select="../../../../../SCHOOL_NUMBER"/><br></br>
-			<b>Student/élève:</b>&#032; <xsl:value-of select="../../../STUDENT_LEGAL_LAST_NAME"/>, 
+			<b>School/Ã©cole:</b>&#032; <xsl:value-of select="../../../../../SCHOOL_NUMBER"/><br></br>
+			<b>Student/Ã©lÃ¨ve:</b>&#032; <xsl:value-of select="../../../STUDENT_LEGAL_LAST_NAME"/>, 
 			<xsl:value-of select="../../../STUDENT_LEGAL_GIVEN_NAME"/>&#032;
 			<xsl:value-of select="../../../STUDENT_LEGAL_SECOND_NAME"/>; 
 			<b>OEN/NISO </b><xsl:value-of select="../../../OEN"/><br></br>
@@ -751,8 +751,8 @@
 			</TABLE>
 		    </xsl:when>
 		    <xsl:when test="name(../..) = 'NON_ACADEMIC_PROGRAM'">
-			<b>School/école:</b>&#032; <xsl:value-of select="../../../../../../SCHOOL_NUMBER"/><br></br>
-			<b>Student/élève:</b>&#032; <xsl:value-of select="../../../../STUDENT_LEGAL_LAST_NAME"/>, 
+			<b>School/Ã©cole:</b>&#032; <xsl:value-of select="../../../../../../SCHOOL_NUMBER"/><br></br>
+			<b>Student/Ã©lÃ¨ve:</b>&#032; <xsl:value-of select="../../../../STUDENT_LEGAL_LAST_NAME"/>, 
 			<xsl:value-of select="../../../../STUDENT_LEGAL_GIVEN_NAME"/>&#032;
 			<xsl:value-of select="../../../../STUDENT_LEGAL_SECOND_NAME"/>; 
 			<b>OEN/NISO </b><xsl:value-of select="../../../../OEN"/><br></br>
@@ -774,7 +774,7 @@
 			</TABLE>
 		    </xsl:when>
 		    <xsl:when test="name(../..) = 'LITERACY_AND_NUMERACY'">
-			<b>School/école:</b>&#032; <xsl:value-of select="../../../SCHOOL_NUMBER"/><br></br>
+			<b>School/Ã©cole:</b>&#032; <xsl:value-of select="../../../SCHOOL_NUMBER"/><br></br>
 			<TABLE BORDER="1" WIDTH="100%" FRAME="box">
 			<TR>
 				<TH><b><center>Section</center></b></TH>
@@ -793,7 +793,7 @@
 			</TABLE>
 		    </xsl:when>
 		    <xsl:when test="name(../..) = 'GRADE'">
-			<b>School/École</b>&#032; <xsl:value-of select="../../../../SCHOOL_NUMBER"/>
+			<b>School/Ã‰cole</b>&#032; <xsl:value-of select="../../../../SCHOOL_NUMBER"/>
 			<TABLE BORDER="1" WIDTH="100%" FRAME="box">
 			<TR>
 				<TH><b><center>Section</center></b></TH>
@@ -812,7 +812,7 @@
 			</TABLE>
 		    </xsl:when>
 			<xsl:when test="name(../..) = 'AVG_REPORT_CARD_GRADE'">
-			<b>School/école:</b>&#032; <xsl:value-of select="../../../../SCHOOL_NUMBER"/><br></br>
+			<b>School/Ã©cole:</b>&#032; <xsl:value-of select="../../../../SCHOOL_NUMBER"/><br></br>
 			<TABLE BORDER="1" WIDTH="100%" FRAME="box">
 			<TR>
 				<TH><b><center>Section</center></b></TH>
@@ -831,8 +831,8 @@
 			</TABLE>
 		    </xsl:when>
 		    <xsl:when test="name(../..) = 'REPORT_CARD'">
-			<b>School/école:</b>&#032; <xsl:value-of select="../../../../../SCHOOL_NUMBER"/><br></br>
-			<b>Student/élève:</b>&#032; <xsl:value-of select="../../../../STUDENT_LEGAL_LAST_NAME"/>, 
+			<b>School/Ã©cole:</b>&#032; <xsl:value-of select="../../../../../SCHOOL_NUMBER"/><br></br>
+			<b>Student/Ã©lÃ¨ve:</b>&#032; <xsl:value-of select="../../../../STUDENT_LEGAL_LAST_NAME"/>, 
 			<xsl:value-of select="../../../../STUDENT_LEGAL_GIVEN_NAME"/>&#032;
 			<xsl:value-of select="../../../../STUDENT_LEGAL_SECOND_NAME"/>; 
 			<b>OEN/NISO </b><xsl:value-of select="../../../../OEN"/><br></br>
@@ -854,9 +854,9 @@
 			</TABLE>
 		    </xsl:when>						
 		    <xsl:when test="name(../..) = 'TERM'">
-			<xsl:if test="name(../../..) = 'REPORT_CARD'"><b>School/École </b>&#032; <xsl:value-of select="../../../../../../SCHOOL_NUMBER"/></xsl:if>
-			<xsl:if test="name(../../..) = 'AVG_REPORT_CARD_GRADE'"><b>School/École</b>&#032; <xsl:value-of select="../../../../SCHOOL_NUMBER"/></xsl:if>
-			<b> Student/élève: </b>&#032; <xsl:value-of select="../../../../../STUDENT_LEGAL_LAST_NAME"/>, 
+			<xsl:if test="name(../../..) = 'REPORT_CARD'"><b>School/Ã‰cole </b>&#032; <xsl:value-of select="../../../../../../SCHOOL_NUMBER"/></xsl:if>
+			<xsl:if test="name(../../..) = 'AVG_REPORT_CARD_GRADE'"><b>School/Ã‰cole</b>&#032; <xsl:value-of select="../../../../SCHOOL_NUMBER"/></xsl:if>
+			<b> Student/Ã©lÃ¨ve: </b>&#032; <xsl:value-of select="../../../../../STUDENT_LEGAL_LAST_NAME"/>, 
 			<xsl:value-of select="../../../../../STUDENT_LEGAL_GIVEN_NAME"/>&#032;
 			<b> OEN/NISO </b><xsl:value-of select="../../../../../OEN"/><br></br>
 			<TABLE BORDER="1" WIDTH="100%" FRAME="box">
@@ -877,14 +877,14 @@
 			</TABLE>
 		    </xsl:when>
 		    <xsl:when test="name(../..) = 'SUBJECT_STRAND'">
-		        <xsl:if test="name(../../../..) = 'REPORT_CARD'"><b>School/École</b>&#032; <xsl:value-of select="../../../../../../../SCHOOL_NUMBER"/>
-			    <br><b>Student/élève:</b>&#032; <xsl:value-of select="../../../../../../STUDENT_LEGAL_LAST_NAME"/>, 
+		        <xsl:if test="name(../../../..) = 'REPORT_CARD'"><b>School/Ã‰cole</b>&#032; <xsl:value-of select="../../../../../../../SCHOOL_NUMBER"/>
+			    <br><b>Student/Ã©lÃ¨ve:</b>&#032; <xsl:value-of select="../../../../../../STUDENT_LEGAL_LAST_NAME"/>, 
 			    <xsl:value-of select="../../../../../../STUDENT_LEGAL_GIVEN_NAME"/>&#032;
 			    <xsl:value-of select="../../../../../../STUDENT_LEGAL_SECOND_NAME"/>; 
 			    <b>OEN/NISO </b><xsl:value-of select="../../../../../../OEN"/></br>
-				<br><b>Subject Strand Code/Code du domaine de la matière </b><xsl:value-of select="../../SUBJECT_STRAND_CODE"/></br><br></br>
+				<br><b>Subject Strand Code/Code du domaine de la matiÃ¨re </b><xsl:value-of select="../../SUBJECT_STRAND_CODE"/></br><br></br>
                         </xsl:if>
-			<xsl:if test="name(../../../..) = 'AVG_REPORT_CARD_GRADE'"><b>School/École</b>&#032; <xsl:value-of select="../../../../../SCHOOL_NUMBER"/></xsl:if>
+			<xsl:if test="name(../../../..) = 'AVG_REPORT_CARD_GRADE'"><b>School/Ã‰cole</b>&#032; <xsl:value-of select="../../../../../SCHOOL_NUMBER"/></xsl:if>
 			<TABLE BORDER="1" WIDTH="100%" FRAME="box">
 			<TR>
 				<TH><b><center>Section</center></b></TH>
@@ -903,8 +903,8 @@
 			</TABLE>
 		    </xsl:when>
 		    <xsl:when test="name(../..) = 'LEARNING_SKILL'">
-			<b>School/École</b>&#032; <xsl:value-of select="../../../../../../../SCHOOL_NUMBER"/>
-		        <br><b>Student/élève:</b>&#032; <xsl:value-of select="../../../../../../STUDENT_LEGAL_LAST_NAME"/>, 
+			<b>School/Ã‰cole</b>&#032; <xsl:value-of select="../../../../../../../SCHOOL_NUMBER"/>
+		        <br><b>Student/Ã©lÃ¨ve:</b>&#032; <xsl:value-of select="../../../../../../STUDENT_LEGAL_LAST_NAME"/>, 
 			<xsl:value-of select="../../../../../../STUDENT_LEGAL_GIVEN_NAME"/>&#032;
 			<xsl:value-of select="../../../../../../STUDENT_LEGAL_SECOND_NAME"/>; 
 			<b>OEN/NISO </b><xsl:value-of select="../../../../../../OEN"/></br>
@@ -926,7 +926,7 @@
 			</TABLE>
 		    </xsl:when>
 		    <xsl:when test="name(../..) = 'SCHOOL_PROGRAM_OFFERED'">
-			<b>School/école:</b>&#032; <xsl:value-of select="../../../SCHOOL_NUMBER"/><br></br>
+			<b>School/Ã©cole:</b>&#032; <xsl:value-of select="../../../SCHOOL_NUMBER"/><br></br>
  			<TABLE BORDER="1" WIDTH="100%" FRAME="box">
  			<TR>
  				<TH><b><center>Section</center></b></TH>
@@ -945,7 +945,7 @@
 			</TABLE>
 		    </xsl:when>
 		    <xsl:when test="name(../..) = 'PLAR_MATURE_REPORT'">
-			<b>School/école:</b>&#032; <xsl:value-of select="../../../SCHOOL_NUMBER"/><br></br>
+			<b>School/Ã©cole:</b>&#032; <xsl:value-of select="../../../SCHOOL_NUMBER"/><br></br>
  			<TABLE BORDER="1" WIDTH="100%" FRAME="box">
  			<TR>
  				<TH><b><center>Section</center></b></TH>
@@ -964,7 +964,7 @@
 			</TABLE>
 		    </xsl:when>
 		    <xsl:when test="name(../..) = 'PLAR_MATURE_EQ_COURSES'">
-			<b>School/école:</b>&#032; <xsl:value-of select="../../../SCHOOL_NUMBER"/><br></br>
+			<b>School/Ã©cole:</b>&#032; <xsl:value-of select="../../../SCHOOL_NUMBER"/><br></br>
  			<TABLE BORDER="1" WIDTH="100%" FRAME="box">
  			<TR>
  				<TH><b><center>Section</center></b></TH>
@@ -983,7 +983,7 @@
 			</TABLE>
 		    </xsl:when>
 		    <xsl:when test="name(../..) = 'PLAR_MATURE_EQ_COUNT'">
-			<b>School/école:</b>&#032; <xsl:value-of select="../../../SCHOOL_NUMBER"/><br></br>
+			<b>School/Ã©cole:</b>&#032; <xsl:value-of select="../../../SCHOOL_NUMBER"/><br></br>
  			<TABLE BORDER="1" WIDTH="100%" FRAME="box">
  			<TR>
  				<TH><b><center>Section</center></b></TH>
@@ -1002,9 +1002,9 @@
 			</TABLE>
 		    </xsl:when>
 		    <xsl:when test="name(../..) = 'SCHOOL_EDUCATOR_ASSIGNMENT'">
-			<b>School/école:</b>&#032; <xsl:value-of select="../../../SCHOOL_NUMBER"/><br></br>
+			<b>School/Ã©cole:</b>&#032; <xsl:value-of select="../../../SCHOOL_NUMBER"/><br></br>
 			<b>MEN/NME:</b>&#032; <xsl:value-of select="../../MEN"/> 
-			<b>Board Employee Number/Numéro d'employé d conseil:</b>&#032; <xsl:value-of select="../../BOARD_EMPLOYEE_NUMBER"/> 
+			<b>Board Employee Number/NumÃ©ro d'employÃ© d conseil:</b>&#032; <xsl:value-of select="../../BOARD_EMPLOYEE_NUMBER"/> 
  			<TABLE BORDER="1" WIDTH="100%" FRAME="box">
  			<TR>
  				<TH><b><center>Section</center></b></TH>
@@ -1023,9 +1023,9 @@
 			</TABLE>
 		    </xsl:when>
 		    <xsl:when test="name(../..) = 'INSTRUCTIONAL_TM'">
-			<b>School/école:</b>&#032; <xsl:value-of select="../../../../SCHOOL_NUMBER"/><br></br>
+			<b>School/Ã©cole:</b>&#032; <xsl:value-of select="../../../../SCHOOL_NUMBER"/><br></br>
 			<b>MEN/NME:</b>&#032; <xsl:value-of select="../../../MEN"/><br></br> 
-			<b>Board Employee Number/Numéro d'employé d conseil:</b>&#032; <xsl:value-of select="../../../BOARD_EMPLOYEE_NUMBER"/> 
+			<b>Board Employee Number/NumÃ©ro d'employÃ© d conseil:</b>&#032; <xsl:value-of select="../../../BOARD_EMPLOYEE_NUMBER"/> 
 			<b>Instructional Time Type/Type d'enseignement:</b>&#032; <xsl:value-of select="../../INSTRUCTIONAL_TM_TYPE"/>, 
  			<TABLE BORDER="1" WIDTH="100%" FRAME="box">
  			<TR>
@@ -1045,9 +1045,9 @@
 			</TABLE>
 		    </xsl:when>
 		    <xsl:when test="name(../..) = 'CLASS_ASSIGNMENT'">
-			<b>School/école:</b>&#032; <xsl:value-of select="../../../../SCHOOL_NUMBER"/><br></br>
+			<b>School/Ã©cole:</b>&#032; <xsl:value-of select="../../../../SCHOOL_NUMBER"/><br></br>
 			<b>MEN/NME:</b>&#032; <xsl:value-of select="../../../MEN"/><br></br> 
-			<b>Board Employee Number/Numéro d'employé d conseil:</b>&#032; <xsl:value-of select="../../../BOARD_EMPLOYEE_NUMBER"/> 
+			<b>Board Employee Number/NumÃ©ro d'employÃ© d conseil:</b>&#032; <xsl:value-of select="../../../BOARD_EMPLOYEE_NUMBER"/> 
 			<b>Class Code/Code de la classe:</b>&#032; <xsl:value-of select="../../CLASS_CODE"/> 
  			<TABLE BORDER="1" WIDTH="100%" FRAME="box">
  			<TR>
@@ -1067,9 +1067,9 @@
 			</TABLE>
 		    </xsl:when>
  		    <xsl:when test="name(../..) = 'ASSIGNED_SUBJECT'">
-			<b>School/école:</b>&#032; <xsl:value-of select="../../../../SCHOOL_NUMBER"/><br></br>
+			<b>School/Ã©cole:</b>&#032; <xsl:value-of select="../../../../SCHOOL_NUMBER"/><br></br>
 			<b>MEN/NME:</b>&#032; <xsl:value-of select="../../../MEN"/><br></br> 
-			<b>Board Employee Number/Numéro d'employé d conseil:</b>&#032; <xsl:value-of select="../../../BOARD_EMPLOYEE_NUMBER"/> 
+			<b>Board Employee Number/NumÃ©ro d'employÃ© d conseil:</b>&#032; <xsl:value-of select="../../../BOARD_EMPLOYEE_NUMBER"/> 
 			<b>Subject/sujet:</b>&#032; 
 				<xsl:value-of select="../../ELEMENTARY_SUBJECT_TYPE"/> 
 				<xsl:value-of select="../../SECONDARY_SUBJECT_TYPE"/> 
@@ -1091,13 +1091,13 @@
 			</TABLE>
 		    </xsl:when>
  		    <xsl:when test="name(../..) = 'ASSIGNED_GRADE'">
-			<b>School/école:</b>&#032; <xsl:value-of select="../../../../../SCHOOL_NUMBER"/><br></br>
+			<b>School/Ã©cole:</b>&#032; <xsl:value-of select="../../../../../SCHOOL_NUMBER"/><br></br>
 			<b>MEN/NME:</b>&#032; <xsl:value-of select="../../../../MEN"/><br></br> 
-			<b>Board Employee Number/Numéro d'employé d conseil:</b>&#032; <xsl:value-of select="../../../../BOARD_EMPLOYEE_NUMBER"/> 
+			<b>Board Employee Number/NumÃ©ro d'employÃ© d conseil:</b>&#032; <xsl:value-of select="../../../../BOARD_EMPLOYEE_NUMBER"/> 
 			<b>Subject/sujet:</b>&#032; 
 				<xsl:value-of select="../../../ELEMENTARY_SUBJECT_TYPE"/>
 				<xsl:value-of select="../../../SECONDARY_SUBJECT_TYPE"/><br></br>
-			<b>Grade/année d'études:</b>&#032; <xsl:value-of select="../../GRADE_TYPE"/> 
+			<b>Grade/annÃ©e d'Ã©tudes:</b>&#032; <xsl:value-of select="../../GRADE_TYPE"/> 
  			<TABLE BORDER="1" WIDTH="100%" FRAME="box">
  			<TR>
  				<TH><b><center>Section</center></b></TH>
@@ -1116,9 +1116,9 @@
 			</TABLE>
 		    </xsl:when>
  		    <xsl:when test="name(../..) = 'TLA'">
-			<b>School/école:</b>&#032; <xsl:value-of select="../../../../SCHOOL_NUMBER"/><br></br>
+			<b>School/Ã©cole:</b>&#032; <xsl:value-of select="../../../../SCHOOL_NUMBER"/><br></br>
 			<b>MEN/NME:</b>&#032; <xsl:value-of select="../../../MEN"/><br></br> 
-			<b>Board Employee Number/Numéro d'employé d conseil:</b>&#032; <xsl:value-of select="../../../BOARD_EMPLOYEE_NUMBER"/> 
+			<b>Board Employee Number/NumÃ©ro d'employÃ© d conseil:</b>&#032; <xsl:value-of select="../../../BOARD_EMPLOYEE_NUMBER"/> 
 			<b>Subject/sujet:</b>&#032; 
 				<xsl:value-of select="../../ELEMENTARY_SUBJECT_TYPE"/> 
 				<xsl:value-of select="../../SECONDARY_SUBJECT_TYPE"/> 
@@ -1140,8 +1140,8 @@
 			</TABLE>
 		    </xsl:when>
 		    <xsl:when test="name(../..) = 'SALEP'">
-			<b>School/école:</b>&#032; <xsl:value-of select="../../../../../SCHOOL_NUMBER"/><br></br>
-			<b>Student/élève:</b>&#032; <xsl:value-of select="../../../../STUDENT_LEGAL_LAST_NAME"/>, 
+			<b>School/Ã©cole:</b>&#032; <xsl:value-of select="../../../../../SCHOOL_NUMBER"/><br></br>
+			<b>Student/Ã©lÃ¨ve:</b>&#032; <xsl:value-of select="../../../../STUDENT_LEGAL_LAST_NAME"/>, 
 			<xsl:value-of select="../../../../STUDENT_LEGAL_GIVEN_NAME"/>&#032;
 			<xsl:value-of select="../../../../STUDENT_LEGAL_SECOND_NAME"/>; 
 			<b>OEN/NISO </b><xsl:value-of select="../../../../OEN"/><br></br>
@@ -1163,8 +1163,8 @@
 			</TABLE>
 		    </xsl:when>
 		    <xsl:when test="name(../..) = 'SHSM_PROGRAM'">
-			<b>School/école:</b>&#032; <xsl:value-of select="../../../../../SCHOOL_NUMBER"/><br></br>
-			<b>Student/élève:</b>&#032; <xsl:value-of select="../../../../STUDENT_LEGAL_LAST_NAME"/>, 
+			<b>School/Ã©cole:</b>&#032; <xsl:value-of select="../../../../../SCHOOL_NUMBER"/><br></br>
+			<b>Student/Ã©lÃ¨ve:</b>&#032; <xsl:value-of select="../../../../STUDENT_LEGAL_LAST_NAME"/>, 
 			<xsl:value-of select="../../../../STUDENT_LEGAL_GIVEN_NAME"/>&#032;
 			<xsl:value-of select="../../../../STUDENT_LEGAL_SECOND_NAME"/>; 
 			<b>OEN/NISO </b><xsl:value-of select="../../../../OEN"/><br></br>
@@ -1187,8 +1187,8 @@
 			</TABLE>
 		    </xsl:when>
 		    <xsl:when test="name(../..) = 'SHSM_CERTIFICATION'">
-			<b>School/école:</b>&#032; <xsl:value-of select="../../../../../../SCHOOL_NUMBER"/><br></br>
-			<b>Student/élève:</b>&#032; <xsl:value-of select="../../../../../STUDENT_LEGAL_LAST_NAME"/>, 
+			<b>School/Ã©cole:</b>&#032; <xsl:value-of select="../../../../../../SCHOOL_NUMBER"/><br></br>
+			<b>Student/Ã©lÃ¨ve:</b>&#032; <xsl:value-of select="../../../../../STUDENT_LEGAL_LAST_NAME"/>, 
 			<xsl:value-of select="../../../../../STUDENT_LEGAL_GIVEN_NAME"/>&#032;
 			<xsl:value-of select="../../../../../STUDENT_LEGAL_SECOND_NAME"/>; 
 			<b>OEN/NISO </b><xsl:value-of select="../../../../../OEN"/>;
@@ -1211,8 +1211,8 @@
 			</TABLE>
 		    </xsl:when>
 		    <xsl:when test="name(../..) = 'SHSM_COURSE'">
-			<b>School/école:</b>&#032; <xsl:value-of select="../../../../../../SCHOOL_NUMBER"/><br></br>
-			<b>Student/élève:</b>&#032; <xsl:value-of select="../../../../../STUDENT_LEGAL_LAST_NAME"/>, 
+			<b>School/Ã©cole:</b>&#032; <xsl:value-of select="../../../../../../SCHOOL_NUMBER"/><br></br>
+			<b>Student/Ã©lÃ¨ve:</b>&#032; <xsl:value-of select="../../../../../STUDENT_LEGAL_LAST_NAME"/>, 
 			<xsl:value-of select="../../../../../STUDENT_LEGAL_GIVEN_NAME"/>&#032;
 			<xsl:value-of select="../../../../../STUDENT_LEGAL_SECOND_NAME"/>; 
 			<b>OEN/NISO </b><xsl:value-of select="../../../../../OEN"/>;
@@ -1235,9 +1235,9 @@
 			</TABLE>
 		    </xsl:when>
 		    <xsl:when test="name(../..) = 'SCHOOL_ENROLMENT_BY_GRADE'">
-			<b>School/école:</b>&#032; <xsl:value-of select="../../../SCHOOL_NUMBER"/><br></br>
+			<b>School/Ã©cole:</b>&#032; <xsl:value-of select="../../../SCHOOL_NUMBER"/><br></br>
 			<b>Language Type/Type de langue:</b>&#032; <xsl:value-of select="../../LANGUAGE_TYPE"/><br></br>
-			<b>Grade Type/Type d'année d'études:</b>&#032; <xsl:value-of select="../../GRADE_TYPE"/><br></br>
+			<b>Grade Type/Type d'annÃ©e d'Ã©tudes:</b>&#032; <xsl:value-of select="../../GRADE_TYPE"/><br></br>
 			<b>Gender Type/Type de sexe:</b>&#032; <xsl:value-of select="../../GENDER_TYPE"/><br></br>
  			<TABLE BORDER="1" WIDTH="100%" FRAME="box">
  			<TR>
@@ -1257,9 +1257,9 @@
 			</TABLE>
 		    </xsl:when>
 		    <xsl:when test="name(../..) = 'SCHOOL_ENROLMENT_BY_AGE'">
-			<b>School/école:</b>&#032; <xsl:value-of select="../../../SCHOOL_NUMBER"/><br></br>
+			<b>School/Ã©cole:</b>&#032; <xsl:value-of select="../../../SCHOOL_NUMBER"/><br></br>
 			<b>Language Type/Type de langue:</b>&#032; <xsl:value-of select="../../LANGUAGE_TYPE"/><br></br>
-			<b>Age Category Type/Type de catégoriés d'âge:</b>&#032; <xsl:value-of select="../../AGE_CATEGORY_TYPE"/><br></br>
+			<b>Age Category Type/Type de catÃ©goriÃ©s d'Ã¢ge:</b>&#032; <xsl:value-of select="../../AGE_CATEGORY_TYPE"/><br></br>
 			<b>Gender Type/Type de sexe:</b>&#032; <xsl:value-of select="../../GENDER_TYPE"/><br></br>
  			<TABLE BORDER="1" WIDTH="100%" FRAME="box">
  			<TR>
@@ -1279,7 +1279,7 @@
 			</TABLE>
 		    </xsl:when>
 		    <xsl:when test="name(../..) = 'SCHOOL_ENROLMENT_BY_PERM_RES'">
-			<b>School/école:</b>&#032; <xsl:value-of select="../../../SCHOOL_NUMBER"/><br></br>
+			<b>School/Ã©cole:</b>&#032; <xsl:value-of select="../../../SCHOOL_NUMBER"/><br></br>
 			<b>Province/Pays:</b>&#032; <xsl:value-of select="../../PROVINCE"/><br></br>
 			<b>Country/Province:</b>&#032; <xsl:value-of select="../../COUNTRY"/><br></br>
  			<TABLE BORDER="1" WIDTH="100%" FRAME="box">
@@ -1300,8 +1300,8 @@
 			</TABLE>
 		    </xsl:when>
 		    <xsl:when test="name(../..) = 'SCHOOL_FSL_COUNT'">
-			<b>School/école:</b>&#032; <xsl:value-of select="../../../SCHOOL_NUMBER"/><br></br>
-			<b>Grade Type/Type d'année d'études:</b>&#032; <xsl:value-of select="../../GRADE_TYPE"/><br></br>
+			<b>School/Ã©cole:</b>&#032; <xsl:value-of select="../../../SCHOOL_NUMBER"/><br></br>
+			<b>Grade Type/Type d'annÃ©e d'Ã©tudes:</b>&#032; <xsl:value-of select="../../GRADE_TYPE"/><br></br>
  			<TABLE BORDER="1" WIDTH="100%" FRAME="box">
  			<TR>
  				<TH><b><center>Section</center></b></TH>
@@ -1320,7 +1320,7 @@
 			</TABLE>
 		    </xsl:when>
 		    <xsl:when test="name(../..) = 'SCHOOL_NL_COUNT'">
-			<b>School/école:</b>&#032; <xsl:value-of select="../../../SCHOOL_NUMBER"/><br></br>
+			<b>School/Ã©cole:</b>&#032; <xsl:value-of select="../../../SCHOOL_NUMBER"/><br></br>
 			<b>SL Program Type/Type de programme de langue seconde:</b>&#032; <xsl:value-of select="../../SEC_LANG_PGM_TYPE"/><br></br>
  			<TABLE BORDER="1" WIDTH="100%" FRAME="box">
  			<TR>
@@ -1340,7 +1340,7 @@
 			</TABLE>
 		    </xsl:when>
 		    <xsl:when test="name(../..) = 'SCHOOL_ENRL_SPECIAL_EDU_PGM'">
-			<b>School/école:</b>&#032; <xsl:value-of select="../../../SCHOOL_NUMBER"/><br></br>
+			<b>School/Ã©cole:</b>&#032; <xsl:value-of select="../../../SCHOOL_NUMBER"/><br></br>
  			<TABLE BORDER="1" WIDTH="100%" FRAME="box">
  			<TR>
  				<TH><b><center>Section</center></b></TH>
@@ -1359,7 +1359,7 @@
 			</TABLE>
 		    </xsl:when>
 		    <xsl:when test="name(../..) = 'SCHOOL_ENRL_TRANS_RET_ADM'">
-			<b>School/école:</b>&#032; <xsl:value-of select="../../../SCHOOL_NUMBER"/><br></br>
+			<b>School/Ã©cole:</b>&#032; <xsl:value-of select="../../../SCHOOL_NUMBER"/><br></br>
  			<TABLE BORDER="1" WIDTH="100%" FRAME="box">
  			<TR>
  				<TH><b><center>Section</center></b></TH>
@@ -1378,7 +1378,7 @@
 			</TABLE>
 		    </xsl:when>
 		    <xsl:when test="name(../..) = 'SCHOOL_ENRL_ADMISSIONS'">
-			<b>School/école:</b>&#032; <xsl:value-of select="../../../SCHOOL_NUMBER"/><br></br>
+			<b>School/Ã©cole:</b>&#032; <xsl:value-of select="../../../SCHOOL_NUMBER"/><br></br>
 			<b>Admission Type/Type d'inscription:</b>&#032; <xsl:value-of select="../../TYPE"/><br></br>
  			<TABLE BORDER="1" WIDTH="100%" FRAME="box">
  			<TR>
@@ -1437,7 +1437,7 @@
 		    </xsl:when>
 		    <xsl:when test="name(../..) = 'VIOLENT_INCIDENT'">
 			<b>Board/Conseil:</b>&#032; <xsl:value-of select="../../../BOARD_NUMBER"/><br></br>
-			<b>School/École:</b>&#032; <xsl:value-of select="../../SCHOOL_NUMBER"/> 
+			<b>School/Ã‰cole:</b>&#032; <xsl:value-of select="../../SCHOOL_NUMBER"/> 
  			<TABLE BORDER="1" WIDTH="100%" FRAME="box">
  			<TR>
  				<TH><b><center>Section</center></b></TH>
@@ -1478,7 +1478,7 @@
 		    <xsl:when test="name(../..) = 'TPA_DETAIL'">
 			<b>Board/Conseil:</b>&#032; <xsl:value-of select="../../../../BOARD_NUMBER"/><br></br>
 			<b>MEN/NME:</b>&#032; <xsl:value-of select="../../../MEN"/><br></br>
-			<b>Appraisal Rating/Note de l'Évaluation:</b>&#032; <xsl:value-of select="../../APPRAISAL_RATING"/> 
+			<b>Appraisal Rating/Note de l'Ã‰valuation:</b>&#032; <xsl:value-of select="../../APPRAISAL_RATING"/> 
  			<TABLE BORDER="1" WIDTH="100%" FRAME="box">
  			<TR>
  				<TH><b><center>Section</center></b></TH>
@@ -1498,9 +1498,9 @@
 		    </xsl:when>
 		    <xsl:when test="name(../..) = 'PERSONNEL'">
 			<b>Board/Conseil:</b>&#032; <xsl:value-of select="../../../BOARD_NUMBER"/><br></br>
-			<b>School Level Type/Niveau de l'école:</b>&#032; <xsl:value-of select="../../SCHOOL_LEVEL_TYPE"/><br></br> 
-			<b>Class Type/Catégorie de menbres du personnel:</b>&#032; <xsl:value-of select="../../STAFF_CTGRY_TYPE"/><br></br> 
-			<b>Attendance Type/Année d'études:</b>&#032; <xsl:value-of select="../../ATTENDANCE_TYPE"/> 
+			<b>School Level Type/Niveau de l'Ã©cole:</b>&#032; <xsl:value-of select="../../SCHOOL_LEVEL_TYPE"/><br></br> 
+			<b>Class Type/CatÃ©gorie de menbres du personnel:</b>&#032; <xsl:value-of select="../../STAFF_CTGRY_TYPE"/><br></br> 
+			<b>Attendance Type/AnnÃ©e d'Ã©tudes:</b>&#032; <xsl:value-of select="../../ATTENDANCE_TYPE"/> 
  			<TABLE BORDER="1" WIDTH="100%" FRAME="box">
  			<TR>
  				<TH><b><center>Section</center></b></TH>
@@ -1520,7 +1520,7 @@
 		    </xsl:when>
 		    <xsl:when test="name(../..) = 'EXCEPTIONAL_STU_TCHR_COUNT'">
 			<b>Board/Conseil:</b>&#032; <xsl:value-of select="../../../BOARD_NUMBER"/>
-			<b> School Level Type/Niveau de l'école:</b>&#032; <xsl:value-of select="../../SCHOOL_LEVEL_TYPE"/><br></br> 
+			<b> School Level Type/Niveau de l'Ã©cole:</b>&#032; <xsl:value-of select="../../SCHOOL_LEVEL_TYPE"/><br></br> 
 			<b>Exceptionality Type/Anomalie:</b>&#032; <xsl:value-of select="../../EXCEPTIONALITY_TYPE"/> 
 			<b> Class Type/Type de classe:</b>&#032; <xsl:value-of select="../../CLASS_TYPE"/><br></br> 
 			<b>Gender Type/Type de sexe:</b>&#032; <xsl:value-of select="../../GENDER_TYPE"/>
@@ -1564,7 +1564,7 @@
 		    </xsl:when>
 		    <xsl:when test="name(../..) = 'CONTINUING_EDU_GRAD_COUNT'">
 			<b>Board/Conseil:</b>&#032; <xsl:value-of select="../../../BOARD_NUMBER"/>
-			<b> Diploma Type/Type de diplômé:</b>&#032; <xsl:value-of select="../../DIPLOMA_TYPE"/><br></br> 
+			<b> Diploma Type/Type de diplÃ´mÃ©:</b>&#032; <xsl:value-of select="../../DIPLOMA_TYPE"/><br></br> 
 			<b>Gender Type/Type de sexe:</b>&#032; <xsl:value-of select="../../GENDER_TYPE"/>
  			<TABLE BORDER="1" WIDTH="100%" FRAME="box">
  			<TR>
@@ -1605,7 +1605,7 @@
 		    </xsl:when>
 		    <xsl:when test="name(../..) = 'LANGUAGE_PROGRAM_TOD_COUNT'">
 			<b>Board/Conseil:</b>&#032; <xsl:value-of select="../../../BOARD_NUMBER"/>
-			<b>Time of Day/Moment de la journée:</b>&#032; <xsl:value-of select="../../TIMEOFDAY_TYPE"/>
+			<b>Time of Day/Moment de la journÃ©e:</b>&#032; <xsl:value-of select="../../TIMEOFDAY_TYPE"/>
  			<TABLE BORDER="1" WIDTH="100%" FRAME="box">
  			<TR>
  				<TH><b><center>Section</center></b></TH>
@@ -1625,10 +1625,10 @@
 		    </xsl:when>
 		    <xsl:when test="name(../..) = 'SPVSD_ALTLR_FOR_EXCUSED_PUP'">
 			<b>Board/Conseil:</b>&#032; <xsl:value-of select="../../../BOARD_NUMBER"/>
-			<b>Age Category Type/Type de catégoriés d'âge:</b>&#032; <xsl:value-of select="../../AGE_CATEGORY_TYPE"/><br></br>
-			<b>Grade Type/Type d'année d'études:</b>&#032; <xsl:value-of select="../../GRADE_TYPE"/><br></br>
+			<b>Age Category Type/Type de catÃ©goriÃ©s d'Ã¢ge:</b>&#032; <xsl:value-of select="../../AGE_CATEGORY_TYPE"/><br></br>
+			<b>Grade Type/Type d'annÃ©e d'Ã©tudes:</b>&#032; <xsl:value-of select="../../GRADE_TYPE"/><br></br>
 			<b>Gender Type/Type de sexe:</b>&#032; <xsl:value-of select="../../GENDER_TYPE"/>
-			<b>Category Type/Type de catégorié:</b>&#032; <xsl:value-of select="../../SPVSD_ALTLR_CTGRY_TYPE"/><br></br>
+			<b>Category Type/Type de catÃ©goriÃ©:</b>&#032; <xsl:value-of select="../../SPVSD_ALTLR_CTGRY_TYPE"/><br></br>
  			<TABLE BORDER="1" WIDTH="100%" FRAME="box">
  			<TR>
  				<TH><b><center>Section</center></b></TH>
@@ -1648,9 +1648,9 @@
 		    </xsl:when>
 		    <xsl:when test="name(../..) = 'NON_ATTENDANCE_AT_SCH_COUNT'">
 			<b>Board/Conseil:</b>&#032; <xsl:value-of select="../../../BOARD_NUMBER"/>
-			<b>School Level Type/Niveau de l'école:</b>&#032; <xsl:value-of select="../../SCHOOL_LEVEL_TYPE"/><br></br> 
+			<b>School Level Type/Niveau de l'Ã©cole:</b>&#032; <xsl:value-of select="../../SCHOOL_LEVEL_TYPE"/><br></br> 
 			<b>Gender Type/Type de sexe:</b>&#032; <xsl:value-of select="../../GENDER_TYPE"/><br></br>
-			<b>Non Attendance Category/Catégorie de non-fréquentation:</b>&#032; <xsl:value-of select="../../NON_ATND_CTGRY_TYPE"/><br></br>
+			<b>Non Attendance Category/CatÃ©gorie de non-frÃ©quentation:</b>&#032; <xsl:value-of select="../../NON_ATND_CTGRY_TYPE"/><br></br>
  			<TABLE BORDER="1" WIDTH="100%" FRAME="box">
  			<TR>
  				<TH><b><center>Section</center></b></TH>
@@ -1671,7 +1671,7 @@
 		    <xsl:when test="name(../..) = 'TPA_MONITORING'">
 			<b>Board/Conseil:</b>&#032; <xsl:value-of select="../../../BOARD_NUMBER"/>
 			<b>Monitoring Type/Type de ERPE:</b>&#032; <xsl:value-of select="../../TPA_MONITORING_TYPE"/><br></br> 
-			<b>Academic Year/Année scolaire:</b>&#032; <xsl:value-of select="../../TPA_ACADEMIC_YEAR_TYPE"/><br></br>
+			<b>Academic Year/AnnÃ©e scolaire:</b>&#032; <xsl:value-of select="../../TPA_ACADEMIC_YEAR_TYPE"/><br></br>
  			<TABLE BORDER="1" WIDTH="100%" FRAME="box">
  			<TR>
  				<TH><b><center>Section</center></b></TH>
@@ -1691,8 +1691,8 @@
 		    </xsl:when>
 		    <xsl:when test="name(../..) = 'TPA_APPRAISAL'">
 			<b>Board/Conseil:</b>&#032; <xsl:value-of select="../../../BOARD_NUMBER"/>
-			<b>Appraisal Type/Type de évaluation:</b>&#032; <xsl:value-of select="../../TPA_MONITORING_TYPE"/><br></br> 
-			<b>School Level Type/Niveau de l'école:</b>&#032; <xsl:value-of select="../../SCHOOL_LEVEL_TYPE"/><br></br> 
+			<b>Appraisal Type/Type de Ã©valuation:</b>&#032; <xsl:value-of select="../../TPA_MONITORING_TYPE"/><br></br> 
+			<b>School Level Type/Niveau de l'Ã©cole:</b>&#032; <xsl:value-of select="../../SCHOOL_LEVEL_TYPE"/><br></br> 
  			<TABLE BORDER="1" WIDTH="100%" FRAME="box">
  			<TR>
  				<TH><b><center>Section</center></b></TH>
@@ -1713,7 +1713,7 @@
 		    <xsl:when test="name(../..) = 'TPA_TERMINATION'">
 			<b>Board/Conseil:</b>&#032; <xsl:value-of select="../../../BOARD_NUMBER"/>
 			<b>Termination Type/Type de cessation:</b>&#032; <xsl:value-of select="../../TPA_TERMINATION_TYPE"/><br></br> 
-			<b>School Level Type/Niveau de l'école:</b>&#032; <xsl:value-of select="../../SCHOOL_LEVEL_TYPE"/><br></br> 
+			<b>School Level Type/Niveau de l'Ã©cole:</b>&#032; <xsl:value-of select="../../SCHOOL_LEVEL_TYPE"/><br></br> 
  			<TABLE BORDER="1" WIDTH="100%" FRAME="box">
  			<TR>
  				<TH><b><center>Section</center></b></TH>
@@ -1734,7 +1734,7 @@
 		    <xsl:when test="name(../..) = 'NTIP_NOTATION'">
 			<b>Board/Conseil:</b>&#032; <xsl:value-of select="../../../BOARD_NUMBER"/>
 			<b>Gender Type/Type de sexe:</b>&#032; <xsl:value-of select="../../GENDER_TYPE"/><br></br>
-			<b>Attendance Type/Année d'études:</b>&#032; <xsl:value-of select="../../ATTENDANCE_TYPE"/> 
+			<b>Attendance Type/AnnÃ©e d'Ã©tudes:</b>&#032; <xsl:value-of select="../../ATTENDANCE_TYPE"/> 
 			<b>NTIP Notation Type/PIPNPE notation:</b>&#032; <xsl:value-of select="../../NTIP_NOTATION_TYPE"/><br></br> 
  			<TABLE BORDER="1" WIDTH="100%" FRAME="box">
  			<TR>
@@ -1755,8 +1755,8 @@
 		    </xsl:when>
 		    <xsl:when test="name(../..) = 'NTIP_RETENTION'">
 			<b>Board/Conseil:</b>&#032; <xsl:value-of select="../../../BOARD_NUMBER"/>
-			<b>Attendance Type/Année d'études:</b>&#032; <xsl:value-of select="../../ATTENDANCE_TYPE"/> 
-			<b>Retention Type/Type de rétention:</b>&#032; <xsl:value-of select="../../NTIP_RETENTION_TYPE"/><br></br> 
+			<b>Attendance Type/AnnÃ©e d'Ã©tudes:</b>&#032; <xsl:value-of select="../../ATTENDANCE_TYPE"/> 
+			<b>Retention Type/Type de rÃ©tention:</b>&#032; <xsl:value-of select="../../NTIP_RETENTION_TYPE"/><br></br> 
  			<TABLE BORDER="1" WIDTH="100%" FRAME="box">
  			<TR>
  				<TH><b><center>Section</center></b></TH>
@@ -1776,7 +1776,7 @@
 		    </xsl:when>
 		    <xsl:when test="name(../..) = 'NTIP_ASSIGNMENT'">
 			<b>Board/Conseil:</b>&#032; <xsl:value-of select="../../../BOARD_NUMBER"/>
-			<b>School Level Type/Niveau de l'école:</b>&#032; <xsl:value-of select="../../SCHOOL_LEVEL_TYPE"/><br></br> 
+			<b>School Level Type/Niveau de l'Ã©cole:</b>&#032; <xsl:value-of select="../../SCHOOL_LEVEL_TYPE"/><br></br> 
 			<b>Gender Type/Type de sexe:</b>&#032; <xsl:value-of select="../../GENDER_TYPE"/><br></br>
 			<b>Assignment Type/Type de affectation:</b>&#032; <xsl:value-of select="../../NTIP_ASSIGNMENT_TYPE"/><br></br> 
  			<TABLE BORDER="1" WIDTH="100%" FRAME="box">
@@ -1797,7 +1797,7 @@
 			</TABLE>
 		    </xsl:when>
 		    <xsl:when test="name(../..) = 'EDUCATOR'">
-			<b>First Name/Prénom:</b>&#032; <xsl:value-of select="../../FIRST_NAME"/><br></br> 
+			<b>First Name/PrÃ©nom:</b>&#032; <xsl:value-of select="../../FIRST_NAME"/><br></br> 
 			<b>Last Name/Nom de famille:</b>&#032; <xsl:value-of select="../../LAST_NAME"/><br></br>
  			<TABLE BORDER="1" WIDTH="100%" FRAME="box">
  			<TR>
@@ -1817,7 +1817,7 @@
 			</TABLE>
 		    </xsl:when>
 		    <xsl:when test="name(../..) = 'CAREER_EXPERIENCE'">
-			<b>First Name/Prénom:</b>&#032; <xsl:value-of select="../../../FIRST_NAME"/><br></br> 
+			<b>First Name/PrÃ©nom:</b>&#032; <xsl:value-of select="../../../FIRST_NAME"/><br></br> 
 			<b>Last Name/Nom de famille:</b>&#032; <xsl:value-of select="../../../LAST_NAME"/><br></br>
  			<TABLE BORDER="1" WIDTH="100%" FRAME="box">
  			<TR>
@@ -1837,7 +1837,7 @@
 			</TABLE>
 		    </xsl:when>
 		    <xsl:when test="name(../..) = 'BOARD'">
-			<b>Board Number/Numéro du conseil:</b>&#032; <xsl:value-of select="../../BOARD_NUMBER"/> 
+			<b>Board Number/NumÃ©ro du conseil:</b>&#032; <xsl:value-of select="../../BOARD_NUMBER"/> 
  			<TABLE BORDER="1" WIDTH="100%" FRAME="box">
  			<TR>
  				<TH><b><center>Section</center></b></TH>
@@ -1856,7 +1856,7 @@
 			</TABLE>
 		    </xsl:when>
 		    <xsl:when test="name(../..) = 'BOARD_PERSONNEL'">
-			<b>Board Number/Numéro du conseil:</b>&#032; <xsl:value-of select="../../../BOARD_NUMBER"/><br></br>
+			<b>Board Number/NumÃ©ro du conseil:</b>&#032; <xsl:value-of select="../../../BOARD_NUMBER"/><br></br>
 			<b>MEN/NME:</b>&#032; <xsl:value-of select="../../MEN"/> 
  			<TABLE BORDER="1" WIDTH="100%" FRAME="box">
  			<TR>
@@ -1876,7 +1876,7 @@
 			</TABLE>
 		    </xsl:when>
 		    <xsl:when test="name(../..) = 'BOARD_SITE'">
-			<b>Board Number/Numéro du conseil:</b>&#032; <xsl:value-of select="../../../BOARD_NUMBER"/><br></br>
+			<b>Board Number/NumÃ©ro du conseil:</b>&#032; <xsl:value-of select="../../../BOARD_NUMBER"/><br></br>
 			<b>Site Name/Nom du conseil:</b>&#032; <xsl:value-of select="../../NAME"/> 
  			<TABLE BORDER="1" WIDTH="100%" FRAME="box">
  			<TR>
@@ -1896,7 +1896,7 @@
 			</TABLE>
 		    </xsl:when>
 		    <xsl:when test="name(../..) = 'BOARD_SITE_ADDRESS'">
-			<b>Board Number/Numéro du conseil:</b>&#032; <xsl:value-of select="../../../../BOARD_NUMBER"/><br></br>
+			<b>Board Number/NumÃ©ro du conseil:</b>&#032; <xsl:value-of select="../../../../BOARD_NUMBER"/><br></br>
 			<b>Site Name/Nom du conseil:</b>&#032; <xsl:value-of select="../../../NAME"/><br></br>
  			<TABLE BORDER="1" WIDTH="100%" FRAME="box">
  			<TR>
@@ -1916,8 +1916,8 @@
 			</TABLE>
 		    </xsl:when>
 		    <xsl:when test="name(../..) = 'COUNSIL'">
-			<b>School/École:</b>&#032; <xsl:value-of select="../../../SCHOOL_NUMBER"/><br></br>
-			<b>Council Name/Conseil d'école:</b>&#032; <xsl:value-of select="../../NAME"/><br></br>
+			<b>School/Ã‰cole:</b>&#032; <xsl:value-of select="../../../SCHOOL_NUMBER"/><br></br>
+			<b>Council Name/Conseil d'Ã©cole:</b>&#032; <xsl:value-of select="../../NAME"/><br></br>
  			<TABLE BORDER="1" WIDTH="100%" FRAME="box">
  			<TR>
  				<TH><b><center>Section</center></b></TH>
@@ -1936,9 +1936,9 @@
 			</TABLE>
 		    </xsl:when>
 		    <xsl:when test="name(../..) = 'SCHOOL_PERSONNEL'">
-			<b>School/École:</b>&#032; <xsl:value-of select="../../../../SCHOOL_NUMBER"/><br></br>
-			<b>Council Name/Conseil d'école:</b>&#032; <xsl:value-of select="../../../NAME"/><br></br>
-			<b>First Name/Prénom:</b>&#032; <xsl:value-of select="../../FIRST_NAME"/> 
+			<b>School/Ã‰cole:</b>&#032; <xsl:value-of select="../../../../SCHOOL_NUMBER"/><br></br>
+			<b>Council Name/Conseil d'Ã©cole:</b>&#032; <xsl:value-of select="../../../NAME"/><br></br>
+			<b>First Name/PrÃ©nom:</b>&#032; <xsl:value-of select="../../FIRST_NAME"/> 
 			<b> Last Name/Nom de famille:</b>&#032; <xsl:value-of select="../../LAST_NAME"/><br></br>
  			<TABLE BORDER="1" WIDTH="100%" FRAME="box">
  			<TR>
@@ -1958,7 +1958,7 @@
 			</TABLE>
 		    </xsl:when>
 		    <xsl:when test="name(../..) = 'SCHOOL_SITE'">
-			<b>School/École:</b>&#032; <xsl:value-of select="../../../SCHOOL_NUMBER"/><br></br>
+			<b>School/Ã‰cole:</b>&#032; <xsl:value-of select="../../../SCHOOL_NUMBER"/><br></br>
 			<b>Site Name/Nom de site:</b>&#032; <xsl:value-of select="../../NAME"/><br></br>
  			<TABLE BORDER="1" WIDTH="100%" FRAME="box">
  			<TR>
@@ -1978,7 +1978,7 @@
 			</TABLE>
 		    </xsl:when>
 		    <xsl:when test="name(../..) = 'SCHOOL_SITE_ADDRESS'">
-			<b>School/École:</b>&#032; <xsl:value-of select="../../../../SCHOOL_NUMBER"/><br></br>
+			<b>School/Ã‰cole:</b>&#032; <xsl:value-of select="../../../../SCHOOL_NUMBER"/><br></br>
 			<b>Site Name/Nom de site:</b>&#032; <xsl:value-of select="../../../NAME"/><br></br>
  			<TABLE BORDER="1" WIDTH="100%" FRAME="box">
  			<TR>
@@ -1998,8 +1998,8 @@
 			</TABLE>
 		    </xsl:when>
 		    <xsl:when test="name(../..) = 'STUDENT_NON_ENROLMENT'">
-			<b>School/école:</b>&#032; <xsl:value-of select="../../../../SCHOOL_NUMBER"/><br></br>
-			<b>Student/élève:</b>&#032; <xsl:value-of select="../../../STUDENT_LEGAL_LAST_NAME"/>, 
+			<b>School/Ã©cole:</b>&#032; <xsl:value-of select="../../../../SCHOOL_NUMBER"/><br></br>
+			<b>Student/Ã©lÃ¨ve:</b>&#032; <xsl:value-of select="../../../STUDENT_LEGAL_LAST_NAME"/>, 
 			<xsl:value-of select="../../../STUDENT_LEGAL_GIVEN_NAME"/>&#032;
 			<xsl:value-of select="../../../STUDENT_LEGAL_SECOND_NAME"/>; 
 			<b>OEN/NISO </b><xsl:value-of select="../../../OEN"/><br></br>
@@ -2021,8 +2021,8 @@
 			</TABLE>
 		    </xsl:when>
 		    <xsl:when test="name(../..) = 'STU_EARLY_YR_EXPERIENCE'">
-			<b>School/école:</b>&#032; <xsl:value-of select="../../../../../SCHOOL_NUMBER"/><br></br>
-			<b>Student/élève:</b>&#032; <xsl:value-of select="../../../../STUDENT_LEGAL_LAST_NAME"/>, 
+			<b>School/Ã©cole:</b>&#032; <xsl:value-of select="../../../../../SCHOOL_NUMBER"/><br></br>
+			<b>Student/Ã©lÃ¨ve:</b>&#032; <xsl:value-of select="../../../../STUDENT_LEGAL_LAST_NAME"/>, 
 			<xsl:value-of select="../../../../STUDENT_LEGAL_GIVEN_NAME"/>&#032;
 			<xsl:value-of select="../../../../STUDENT_LEGAL_SECOND_NAME"/>; 
 			<b>OEN/NISO </b><xsl:value-of select="../../../../OEN"/><br></br>
@@ -2044,8 +2044,8 @@
 			</TABLE>
 		    </xsl:when>						
 		    <xsl:when test="name(../..) = 'STU_EARLY_YR_QUESTION'">
-			<b>School/école:</b>&#032; <xsl:value-of select="../../../../../../SCHOOL_NUMBER"/><br></br>
-			<b>Student/élève:</b>&#032; <xsl:value-of select="../../../../../STUDENT_LEGAL_LAST_NAME"/>, 
+			<b>School/Ã©cole:</b>&#032; <xsl:value-of select="../../../../../../SCHOOL_NUMBER"/><br></br>
+			<b>Student/Ã©lÃ¨ve:</b>&#032; <xsl:value-of select="../../../../../STUDENT_LEGAL_LAST_NAME"/>, 
 			<xsl:value-of select="../../../../../STUDENT_LEGAL_GIVEN_NAME"/>&#032;
 			<xsl:value-of select="../../../../../STUDENT_LEGAL_SECOND_NAME"/>; 
 			<b>OEN/NISO </b><xsl:value-of select="../../../../../OEN"/><br></br>
@@ -2067,8 +2067,8 @@
 			</TABLE>
 		    </xsl:when>						
 		    <xsl:when test="name(../..) = 'STU_EARLY_YR_CC_PRG_HEADER'">
-			<b>School/école:</b>&#032; <xsl:value-of select="../../../../../../SCHOOL_NUMBER"/><br></br>
-			<b>Student/élève:</b>&#032; <xsl:value-of select="../../../../../STUDENT_LEGAL_LAST_NAME"/>, 
+			<b>School/Ã©cole:</b>&#032; <xsl:value-of select="../../../../../../SCHOOL_NUMBER"/><br></br>
+			<b>Student/Ã©lÃ¨ve:</b>&#032; <xsl:value-of select="../../../../../STUDENT_LEGAL_LAST_NAME"/>, 
 			<xsl:value-of select="../../../../../STUDENT_LEGAL_GIVEN_NAME"/>&#032;
 			<xsl:value-of select="../../../../../STUDENT_LEGAL_SECOND_NAME"/>; 
 			<b>OEN/NISO </b><xsl:value-of select="../../../../../OEN"/><br></br>
@@ -2090,8 +2090,8 @@
 			</TABLE>
 		    </xsl:when>						
 		    <xsl:when test="name(../..) = 'STU_EARLY_YR_CC_PRG_DETAIL'">
-			<b>School/école:</b>&#032; <xsl:value-of select="../../../../../../../SCHOOL_NUMBER"/><br></br>
-			<b>Student/élève:</b>&#032; <xsl:value-of select="../../../../../../STUDENT_LEGAL_LAST_NAME"/>, 
+			<b>School/Ã©cole:</b>&#032; <xsl:value-of select="../../../../../../../SCHOOL_NUMBER"/><br></br>
+			<b>Student/Ã©lÃ¨ve:</b>&#032; <xsl:value-of select="../../../../../../STUDENT_LEGAL_LAST_NAME"/>, 
 			<xsl:value-of select="../../../../../../STUDENT_LEGAL_GIVEN_NAME"/>&#032;
 			<xsl:value-of select="../../../../../../STUDENT_LEGAL_SECOND_NAME"/>; 
 			<b>OEN/NISO </b><xsl:value-of select="../../../../../../OEN"/><br></br>
@@ -2113,8 +2113,8 @@
 			</TABLE>
 		    </xsl:when>						
 		    <xsl:when test="name(../..) = 'STU_EARLY_YR_CC_ACTIVITY_REG'">
-			<b>School/école:</b>&#032; <xsl:value-of select="../../../../../../SCHOOL_NUMBER"/><br></br>
-			<b>Student/élève:</b>&#032; <xsl:value-of select="../../../../../STUDENT_LEGAL_LAST_NAME"/>, 
+			<b>School/Ã©cole:</b>&#032; <xsl:value-of select="../../../../../../SCHOOL_NUMBER"/><br></br>
+			<b>Student/Ã©lÃ¨ve:</b>&#032; <xsl:value-of select="../../../../../STUDENT_LEGAL_LAST_NAME"/>, 
 			<xsl:value-of select="../../../../../STUDENT_LEGAL_GIVEN_NAME"/>&#032;
 			<xsl:value-of select="../../../../../STUDENT_LEGAL_SECOND_NAME"/>; 
 			<b>OEN/NISO </b><xsl:value-of select="../../../../../OEN"/><br></br>
