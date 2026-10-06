@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
     <title>OCSB XML Viewer</title>
     <style>
         body {
@@ -55,8 +56,28 @@
             margin: 20px;
         }
     </style>
+
+    <!-- JavaScript XSLT processor (replaces the browser's built-in XSLT) -->
+    <script src="https://cdn.jsdelivr.net/npm/@tradik/xslt-processor@1/dist/xslt-processor.browser.min.js"></script>
+
     <script>
-        function readXMLFile() {
+        // Decode raw bytes: try UTF-8 first, then fall back to the encoding
+        // declared in the XML header (OnSIS files use ISO-8859-1).
+        function decodeBuffer(buffer) {
+            try {
+                return new TextDecoder("utf-8", { fatal: true }).decode(buffer);
+            } catch (e) {
+                var head = new TextDecoder("windows-1252").decode(buffer.slice(0, 200));
+                var m = head.match(/encoding\s*=\s*["']([^"']+)["']/i);
+                try {
+                    return new TextDecoder(m ? m[1] : "windows-1252").decode(buffer);
+                } catch (e2) {
+                    return new TextDecoder("windows-1252").decode(buffer);
+                }
+            }
+        }
+
+        async function readXMLFile() {
             var input = document.getElementById('fileInput');
             var file = input.files[0];
 
@@ -65,28 +86,57 @@
                 return;
             }
 
-            var reader = new FileReader();
-            reader.onload = function (e) {
-                var xmlContent = e.target.result;
+            try {
+                // Read the XML file
+                var xmlContent = decodeBuffer(await file.arrayBuffer());
 
-                var xsltProcessor = new XSLTProcessor();
-                var xslFile = 'style_format.xsl';
+                var parser = new DOMParser();
+                var xmlDocument = parser.parseFromString(xmlContent, 'application/xml');
 
-                var xhr = new XMLHttpRequest();
-                xhr.open('GET', xslFile, true);
-                xhr.onreadystatechange = function () {
-                    if (xhr.readyState === 4 && xhr.status === 200) {
-                        xsltProcessor.importStylesheet(xhr.responseXML);
+                var xmlError = xmlDocument.getElementsByTagName('parsererror');
+                if (xmlError.length > 0) {
+                    throw new Error('The XML file could not be parsed.\n\n' + xmlError[0].textContent);
+                }
 
-                        var transformedContent = xsltProcessor.transformToDocument(new DOMParser().parseFromString(xmlContent, 'text/xml'));
-                        var result = new XMLSerializer().serializeToString(transformedContent);
+                // Load the XSL file
+                var response = await fetch('style_format.xsl');
+                if (!response.ok) {
+                    throw new Error('Could not load style_format.xsl. HTTP status: ' + response.status);
+                }
 
-                        document.getElementById('result').innerHTML = result;
-                    }
-                };
-                xhr.send();
-            };
-            reader.readAsText(file);
+                var xslContent = decodeBuffer(await response.arrayBuffer());
+                var xslDocument = parser.parseFromString(xslContent, 'application/xml');
+
+                var xslError = xslDocument.getElementsByTagName('parsererror');
+                if (xslError.length > 0) {
+                    throw new Error('style_format.xsl could not be parsed.\n\n' + xslError[0].textContent);
+                }
+
+                // Transform using the JavaScript XSLT library
+                if (typeof XsltProcessorLib === 'undefined' || !XsltProcessorLib.XSLTProcessor) {
+                    throw new Error('The JavaScript XSLT processor library was not loaded.');
+                }
+
+                var xsltProcessor = new XsltProcessorLib.XSLTProcessor();
+                xsltProcessor.importStylesheet(xslDocument);
+
+                var transformedContent = xsltProcessor.transformToDocument(xmlDocument);
+
+                // Display the result
+                var body = transformedContent.getElementsByTagName('BODY')[0] ||
+                           transformedContent.getElementsByTagName('body')[0];
+
+                if (body) {
+                    document.getElementById('result').innerHTML = body.innerHTML;
+                } else {
+                    document.getElementById('result').innerHTML =
+                        new XMLSerializer().serializeToString(transformedContent);
+                }
+
+            } catch (error) {
+                console.error('PROCESSING ERROR:', error);
+                alert('Processing failed.\n\n' + error.message);
+            }
         }
     </script>
 </head>
